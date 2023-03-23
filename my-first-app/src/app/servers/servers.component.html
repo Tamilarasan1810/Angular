@@ -1,0 +1,36 @@
+<div>
+  <h3>Server component nested inside Servers component</h3>
+  <app-server *ngFor="let server of servers"></app-server>
+  <hr />
+  <label for="server-name">Server Name (one way data binding)</label>
+  <input
+    type="text"
+    id="server-name"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+  />
+  <P>{{ serverName }}</P>
+  <label for="server-name">Server Name (two way data binding)</label>
+  <input
+    type="text"
+    id="server-name"
+    class="form-control"
+    [(ngModel)]="serverName"
+  />
+  <P>{{ serverName }}</P>
+
+  <button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+  >
+    Add sever
+  </button>
+  <p>{{ serverCreationStatus }}</p>
+  <p *ngIf="serverCreated; else noServer">
+    Server was Created, Name is {{ serverName }}
+  </p>
+  <ng-template #noServer>
+    <p>No server was created</p>
+  </ng-template>
+</div>

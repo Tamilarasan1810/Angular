@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div>
+        <h3>App Component</h3>
+        <input type="text" [(ngModel)]="name" />
+        <p>{{ name }}</p>
+      </div>
+      <hr />
+      <div>
+        <h3>Server Component</h3>
+        <app-servers></app-servers>
+      </div>
+    </div>
+  </div>
+  <app-warning></app-warning>
+  <br />
+  <app-success></app-success>
+  <label for="username">Username</label>
+  <input
+    type="text"
+    class="form-control"
+    id="username"
+    [(ngModel)]="username"
+  />
+  <p>{{ username }}</p>
+  <button
+    class="btn btn-primary m"
+    [disabled]="username === ''"
+    (click)="username = ''"
+  >
+    submit username
+  </button>
+  <hr />
+  <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">
+    Display Details
+  </button> -->
+  <button class="btn btn-primary" (click)="onToggleDetails()">
+    Display Details
+  </button>
+  <p *ngIf="showSecret">Secret Password = "king"</p>
+  <div
+    *ngFor="let logItem of logs; let i = index"
+    [ngStyle]="{
+      backgroundColor: i >= 5 ? ' blue' : 'transparent'
+    }"
+    [ngClass]="{ whiteText: i >= 5 }"
+  >
+    <p>{{ logItem }}</p>
+  </div>
+</div>
