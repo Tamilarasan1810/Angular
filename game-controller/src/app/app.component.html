@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-4" style="background-color: rgb(241, 111, 111)">
+      <app-game-controller
+        (gameStart)="onGameStart($event)"
+        (gameEnd)="onGameEnd()"
+      ></app-game-controller>
+    </div>
+
+    <div class="col col-xs-4" style="background-color: rgb(110, 110, 242)">
+      <div *ngFor="let game of gameValues">
+        <div *ngIf="game.gameval % 2 != 0">
+          <app-odd [eachGame]="game"></app-odd>
+        </div>
+      </div>
+    </div>
+    <div class="col col-xs-4" style="background-color: rgb(114, 244, 114)">
+      <div *ngFor="let game of gameValues">
+        <div *ngIf="game.gameval % 2 == 0">
+          <app-even [eachGame]="game"></app-even>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
