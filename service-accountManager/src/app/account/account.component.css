@@ -1,0 +1,10 @@
+.row {
+  border: 2px solid grey;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+button {
+  margin: 3px;
+}
