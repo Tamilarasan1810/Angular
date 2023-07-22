@@ -1,0 +1,139 @@
+<!-- <nav
+  class="navbar navbar-expand-lg"
+  style="background-color: rgb(247, 108, 58)"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      style="
+        color: rgb(70, 70, 206);
+        font-weight: 700;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      "
+      href="#"
+      >Imprint</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<!-- row  -->
+<div>
+  <div
+    class="row"
+    style="
+      justify-content: center;
+      display: grid;
+      align-content: center;
+      margin-top: 10%;
+    "
+  >
+    <div class="col">
+      <div class="row p-3">
+        <!-- <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Take Print Out</h5>
+              <p class="card-text">
+                Please upload your esteemed document in the distinguished format
+                of PDF, and kindly the settings to facilitate the acquisition of
+                a tangible printout.
+              </p>
+              <a href="#" class="btn btn-primary">March forth</a>
+            </div>
+          </div>
+        </div> -->
+        <!--  -->
+        <div class="col-sm-4">
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-header">Take Print Out</div>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Now Serving</h5> -->
+              <p class="card-text">
+                Please upload your esteemed document in the distinguished format
+                of PDF, and kindly the settings to facilitate the acquisition of
+                a tangible printout.
+              </p>
+
+              <a
+                routerLink="/printable"
+                class="btn"
+                style="background-color: rgb(180, 176, 176)"
+                (click)="go_to_printable('go_to_printable')"
+                ><b>March forth</b></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="col-sm-4">
+          <div class="card text-white bg-success mb-3" style="max-width: 18rem">
+            <div class="card-header">Queue Status</div>
+            <div class="card-body">
+              <h5 class="card-title">Now Serving</h5>
+              <p class="card-text">
+                Token NO: 66 <br />
+                Urgently advance, time brooks no delay.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="col-sm-4">
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-header">Your Orders</div>
+            <div class="card-body">
+              <h5 class="card-title">Now Serving</h5>
+              <p class="card-text">You haven't had any orders yet.</p>
+              <a
+                href="#"
+                class="btn"
+                style="background-color: rgb(180, 176, 176)"
+                ><b>Make it</b></a
+              >
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Your Orders</h5>
+              <p class="card-text">You haven't had any orders yet.</p>
+              <a href="#" class="btn btn-primary">Make it </a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+<router-outlet></router-outlet>

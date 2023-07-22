@@ -1,0 +1,5 @@
+Import bootstrap => npm i bootstrap@3
+
+To count no.of pages in pdf use => npm install pdfjs-dist
+
+npm install --save @types/pdfjs-dist

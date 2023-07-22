@@ -1,0 +1,47 @@
+<div class="row">
+  <button type="button" class="btn btn-primary" (click)="openPopup()">
+    Open Popup
+  </button>
+
+  <div
+    class="col-xs-12 col-md-8 col-md-offset-2"
+    style="
+      border: 1px solid rgb(170, 193, 60);
+      border-radius: 3px;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    "
+  >
+    <label for="">Add new File</label>
+    <!-- <button class="btn btn-primary"> Add File  </button>-->
+    <input type="file" name="fileInput" (change)="getFile($event)" />
+  </div>
+  <div
+    class="col-xs-12 col-md-8 col-md-offset-2"
+    style="
+      border: 1px solid rgb(170, 193, 60);
+      border-radius: 3px;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    "
+    *ngFor="let file of files; let i = index"
+  >
+    <div class="card">
+      <h5 class="card-header">
+        <b>{{ file.name }}</b>
+      </h5>
+      <div class="card-body">
+        <h5 class="card-title">
+          Pages: <b>{{ file.pages }}</b>
+        </h5>
+        <p class="card-text">
+          Layout: {{ file.layout }} <br />Pages per side:
+          <b>{{ file.pps }}</b> ......
+        </p>
+        <button class="btn btn-primary" (click)="onSelectedFileIndex(i)">
+          Edit Features
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

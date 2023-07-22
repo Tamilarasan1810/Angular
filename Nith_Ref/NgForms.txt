@@ -1,0 +1,28 @@
+Developers Develop Work flow by using
+
+Data binding
+change tracking
+validation
+visual feedback
+Error message
+Form submission
+
+
+Templates, Components, Data Binding and services
+
+Types of Forms
+
+-> Template Driven forms -> heavy on component Template
+-> Reactive Forms -> heavy on component class
+
+
+one way binding 
+two way binding
+
+Form validation:
+
+ if true     if false
+
+ng-touched  ng-untouched   => have been visited?
+ng-dirty    ng-pristine    => did the values changed?
+ng-valid    ng-invalid     => is it valid?

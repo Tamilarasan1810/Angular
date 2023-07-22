@@ -1,0 +1,27 @@
+<div class="row">
+  <div
+    class="col-xs-12 col-md-8 col-md-offset-2"
+    style="
+      border: 1px solid rgb(170, 193, 60);
+      border-radius: 3px;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    "
+  >
+    <h5>Inactive Accounts</h5>
+    <hr />
+    <div
+      *ngFor="let user of inactiveUsers; index as i"
+      style="margin-bottom: 15px"
+    >
+      <label for="">{{ user }}</label>
+      <button
+        class="btn btn-default"
+        style="margin-left: 5px"
+        (click)="setToActive(i)"
+      >
+        Set as Inactive
+      </button>
+    </div>
+  </div>
+</div>
